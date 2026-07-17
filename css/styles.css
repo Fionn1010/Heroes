@@ -1,0 +1,147 @@
+:root{
+  --ink:#19140f;
+  --paper:#f7f0e4;
+  --paper-2:#fffaf2;
+  --gold:#bf8b2f;
+  --gold-dark:#8d6118;
+  --green:#315b47;
+  --muted:#756b5d;
+  --line:#d9c8aa;
+  --shadow:0 18px 48px rgba(41,29,15,.13);
+  font-family:Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at top right,rgba(191,139,47,.14),transparent 28rem),
+    var(--paper);
+}
+button,select{font:inherit}
+button{cursor:pointer}
+.siteHeader{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:22px max(18px,calc((100vw - 1120px)/2));
+  background:#17120e;
+  color:white;
+  border-bottom:3px solid var(--gold);
+}
+.siteHeader h1{margin:3px 0;font-size:clamp(30px,6vw,52px)}
+.siteHeader p{margin:0;color:#dbc9ab}
+.eyebrow,.kicker{
+  margin:0 0 7px;
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.15em;
+  color:var(--gold-dark);
+}
+main{width:min(1120px,calc(100% - 28px));margin:28px auto 60px}
+.heroIntro{
+  display:grid;
+  gap:24px;
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:26px;
+  background:var(--paper-2);
+  box-shadow:var(--shadow);
+}
+.heroIntro h2,.stationContent h2,.finishPanel h2,.developerTools h2{
+  margin:0 0 12px;
+  font-size:clamp(32px,7vw,54px);
+  line-height:1.02;
+}
+.heroIntro p{font-size:18px;line-height:1.55}
+.introArtwork{
+  min-height:280px;
+  display:grid;
+  place-items:center;
+  border-radius:20px;
+  border:2px dashed #ccb783;
+  background:linear-gradient(145deg,#2a2219,#5b4934);
+  color:#ead9b3;
+  font:800 14px Arial,sans-serif;
+  letter-spacing:.12em;
+}
+.primaryButton,.secondaryButton,.smallButton{
+  min-height:50px;
+  border-radius:13px;
+  padding:12px 18px;
+  font-weight:800;
+}
+.primaryButton{
+  border:0;
+  background:linear-gradient(180deg,#d3a247,var(--gold-dark));
+  color:white;
+  box-shadow:0 8px 18px rgba(111,74,13,.2);
+}
+.secondaryButton{border:1px solid #b89d6d;background:white;color:var(--ink)}
+.smallButton{min-height:40px;border:1px solid #9b8359;background:transparent;color:inherit}
+.fullWidth{width:100%}
+.tourArea{margin-top:24px}
+.progressWrap{margin-bottom:15px}
+.progressText{display:flex;justify-content:space-between;gap:12px;margin-bottom:8px;font-weight:800}
+.progressTrack{height:8px;overflow:hidden;border-radius:999px;background:#dfd3be}
+.progressBar{height:100%;width:0;background:var(--gold);transition:width .25s ease}
+.stationCard{
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:25px;
+  background:var(--paper-2);
+  box-shadow:var(--shadow);
+}
+.stationImageWrap{position:relative;min-height:320px;background:#282118}
+.stationImage{display:block;width:100%;height:100%;min-height:320px;object-fit:cover}
+.stationImagePlaceholder{
+  position:absolute;inset:0;display:grid;place-items:center;color:#dfc995;
+  font:900 14px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;
+}
+.stationNumber{
+  position:absolute;right:17px;bottom:17px;display:grid;place-items:center;
+  width:58px;height:58px;border-radius:999px;background:var(--gold);color:white;font-weight:900;font-size:20px
+}
+.stationContent{padding:22px}
+.stationContent h2{font-size:clamp(34px,8vw,58px)}
+.heroDates{margin:-5px 0 14px;color:var(--gold-dark);font-weight:800}
+.heroIntro{font-size:18px;line-height:1.55}
+blockquote{margin:18px 0;padding:14px 16px;border-left:4px solid var(--gold);background:#f2e5cb;font-style:italic}
+.actions,.navigation{display:grid;gap:10px}
+.poseGuide{margin-top:18px;padding-top:15px;border-top:1px solid var(--line)}
+.poseGuide summary{font-weight:800;cursor:pointer}
+.poseGuide li{margin:8px 0;line-height:1.45}
+.arPanel,.finishPanel,.developerTools{
+  margin-top:24px;padding:20px;border:1px solid var(--line);border-radius:24px;background:var(--paper-2);box-shadow:var(--shadow)
+}
+.arHeading,.devHeading{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.arHeading h2,.devHeading h2{margin:0}
+model-viewer{width:100%;height:62vh;min-height:420px;margin:16px 0;border-radius:18px;background:linear-gradient(#eee6d9,#d9cbb5)}
+.statusText,.devHint{color:var(--muted);font-size:14px;line-height:1.45}
+.navigation{margin-top:16px}
+.finishPanel{text-align:center}
+.developerTools{border:2px solid var(--gold)}
+.devBadge{border-radius:999px;background:#17120e;color:#efc96f;padding:8px 10px;font:900 11px Arial,sans-serif;letter-spacing:.08em}
+.fieldLabel{display:block;margin:18px 0 7px;font-weight:900}
+#devLanguage{width:100%;min-height:48px;border:1px solid #bda06e;border-radius:12px;padding:0 12px;background:white}
+.devStations{display:grid;gap:10px;margin-top:16px}
+.devStation{
+  display:grid;gap:10px;padding:12px;border:1px solid var(--line);border-radius:14px;background:white
+}
+.devStation strong{font-size:17px}
+.devStation small{display:block;margin-top:3px;color:var(--muted)}
+.devActions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.devActions button{min-height:44px;border-radius:10px;font-weight:800}
+.devScene{border:1px solid #ad9363;background:white}
+.devAR{border:0;background:var(--green);color:white}
+@media(min-width:760px){
+  .heroIntro{grid-template-columns:1.05fr .95fr;align-items:center;padding:34px}
+  .stationCard{display:grid;grid-template-columns:.9fr 1.1fr}
+  .stationImageWrap,.stationImage{min-height:620px}
+  .stationContent{padding:36px}
+  .actions,.navigation{grid-template-columns:1fr 1fr}
+  .devStation{grid-template-columns:1fr 300px;align-items:center}
+}

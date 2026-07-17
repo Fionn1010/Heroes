@@ -1,0 +1,9 @@
+{
+  "name": "Hero's Tour",
+  "short_name": "Hero Tour",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f0e4",
+  "theme_color": "#15110d",
+  "icons": []
+}

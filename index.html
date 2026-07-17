@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#15110d">
+  <meta name="description" content="A mobile AR selfie tour celebrating personal heroes.">
+  <title>Hero's Tour</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer@4.0.0/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <header class="siteHeader">
+    <div>
+      <p class="eyebrow">AR SELFIE EXPERIENCE</p>
+      <h1 id="tourTitle">Hero's Tour</h1>
+      <p id="tourSubtitle">Meet the people who inspired me.</p>
+    </div>
+    <button id="openDevTools" class="smallButton" type="button" hidden>Developer tools</button>
+  </header>
+
+  <main>
+    <section class="heroIntro">
+      <div class="heroIntroCopy">
+        <p class="kicker">Welcome</p>
+        <h2>Walk among heroes.</h2>
+        <p>
+          Visit each station, discover the story behind a hero, and place a
+          life-sized AR character beside you for a photograph.
+        </p>
+        <button id="startTour" class="primaryButton" type="button">Begin the tour</button>
+      </div>
+      <div class="introArtwork" aria-hidden="true">
+        <span>YOUR HERO IMAGE</span>
+      </div>
+    </section>
+
+    <section id="tourArea" class="tourArea" hidden>
+      <div class="progressWrap" aria-label="Tour progress">
+        <div class="progressText">
+          <span id="stopCounter">Station 1 of 6</span>
+          <span id="distanceText">Selfie Station</span>
+        </div>
+        <div class="progressTrack"><div id="progressBar" class="progressBar"></div></div>
+      </div>
+
+      <article class="stationCard">
+        <div class="stationImageWrap">
+          <img id="heroImage" class="stationImage" alt="">
+          <div id="imagePlaceholder" class="stationImagePlaceholder">Hero portrait</div>
+          <span class="stationNumber" id="stationNumber">01</span>
+        </div>
+
+        <div class="stationContent">
+          <p class="kicker" id="stationLabel">SELFIE STATION 1</p>
+          <h2 id="heroName">Hero name</h2>
+          <p class="heroDates" id="heroDates"></p>
+          <p class="heroIntro" id="heroIntro"></p>
+
+          <blockquote id="heroQuote" hidden></blockquote>
+
+          <div class="actions">
+            <button id="playStory" class="secondaryButton" type="button">Hear their story</button>
+            <button id="launchAR" class="primaryButton" type="button">Launch selfie station</button>
+          </div>
+
+          <details class="poseGuide">
+            <summary>How to take the selfie</summary>
+            <ol>
+              <li>Point your phone at the ground and move it slowly.</li>
+              <li>Tap to place the hero beside you.</li>
+              <li>Stand next to the character and use your camera or screenshot button.</li>
+            </ol>
+          </details>
+        </div>
+      </article>
+
+      <section id="arPanel" class="arPanel" hidden>
+        <div class="arHeading">
+          <div>
+            <p class="kicker">AR PREVIEW</p>
+            <h2 id="arHeroName">Your hero</h2>
+          </div>
+          <button id="closeAR" class="smallButton" type="button">Close</button>
+        </div>
+
+        <model-viewer
+          id="heroModel"
+          camera-controls
+          touch-action="pan-y"
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          shadow-intensity="1"
+          exposure="1"
+          interaction-prompt="auto"
+          alt="A 3D hero character">
+        </model-viewer>
+
+        <button id="activateAR" class="primaryButton fullWidth" type="button">
+          Place hero in AR
+        </button>
+        <p id="arStatus" class="statusText">The model will appear here when one is added.</p>
+      </section>
+
+      <div class="navigation">
+        <button id="previousStop" class="secondaryButton" type="button">Previous hero</button>
+        <button id="nextStop" class="primaryButton" type="button">Next hero</button>
+      </div>
+    </section>
+
+    <section id="finishPanel" class="finishPanel" hidden>
+      <p class="kicker">TOUR COMPLETE</p>
+      <h2>You have met all of the heroes.</h2>
+      <p>Thank you for taking the Hero's Tour.</p>
+      <button id="restartTour" class="primaryButton" type="button">Return to the first hero</button>
+    </section>
+
+    <section id="developerTools" class="developerTools" hidden>
+      <div class="devHeading">
+        <div>
+          <p class="eyebrow">PRIVATE TESTING AREA</p>
+          <h2>Developer Tools</h2>
+          <p>Jump directly to any selfie station or launch its AR model.</p>
+        </div>
+        <span class="devBadge">DEV MODE</span>
+      </div>
+
+      <label class="fieldLabel" for="devLanguage">Test language</label>
+      <select id="devLanguage">
+        <option value="en">English</option>
+      </select>
+
+      <div id="devStations" class="devStations"></div>
+      <p class="devHint">Open this panel using <strong>?dev=1</strong>.</p>
+    </section>
+  </main>
+
+  <audio id="storyAudio" preload="none"></audio>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
