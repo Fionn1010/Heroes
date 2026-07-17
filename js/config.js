@@ -7,75 +7,75 @@ window.HERO_TOUR_CONFIG = {
   stations: [
     {
       id: "hero-1",
-      name: "Hero One",
-      dates: "",
+      name: "Sir Clive Sinclair",
+      dates: "1940–2021",
       label: "Selfie Station 1",
-      intro: "Add a short introduction explaining why this person is one of your heroes.",
-      quote: "",
-      image: "images/heroes/hero-1.jpg",
-      model: "models/hero-1.glb",
+      intro: "Inventor of the ZX Spectrum and one of the pioneers of affordable home computing.",
+      quote: "Technology should be available to everyone.",
+      image: "images/heroes/clive.jpg",
+      model: "models/Dartagnon.glb",
       iosModel: "",
-      audio: "videos/hero-1-en.mp3"
+      audio: "videos/clive-en.mp3"
     },
     {
       id: "hero-2",
-      name: "Hero Two",
-      dates: "",
+      name: "Donnie Yen",
+      dates: "1963–",
       label: "Selfie Station 2",
-      intro: "Add the story for your second hero here.",
+      intro: "Martial artist, actor and action choreographer renowned for blending traditional martial arts with cinematic storytelling.",
       quote: "",
-      image: "images/heroes/hero-2.jpg",
-      model: "models/hero-2.glb",
+      image: "images/heroes/donnie.jpg",
+      model: "models/DonnieJ.glb",
       iosModel: "",
-      audio: "videos/hero-2-en.mp3"
+      audio: "videos/donnie-en.mp3"
     },
     {
       id: "hero-3",
-      name: "Hero Three",
-      dates: "",
+      name: "Bruce Lee",
+      dates: "1940–1973",
       label: "Selfie Station 3",
-      intro: "Add the story for your third hero here.",
-      quote: "",
-      image: "images/heroes/hero-3.jpg",
-      model: "models/hero-3.glb",
+      intro: "The martial artist whose philosophy and films inspired generations around the world.",
+      quote: "Be water, my friend.",
+      image: "images/heroes/bruce.jpg",
+      model: "models/bruce.glb",
       iosModel: "",
-      audio: "videos/hero-3-en.mp3"
+      audio: "videos/bruce-en.mp3"
     },
     {
       id: "hero-4",
-      name: "Hero Four",
-      dates: "",
+      name: "Alfonso Ribeiro",
+      dates: "1971–",
       label: "Selfie Station 4",
-      intro: "Add the story for your fourth hero here.",
+      intro: "Actor, television presenter and entertainer best known for bringing joy and humour to audiences worldwide.",
       quote: "",
-      image: "images/heroes/hero-4.jpg",
-      model: "models/hero-4.glb",
+      image: "images/heroes/alfonso.jpg",
+      model: "models/alfonso.glb",
       iosModel: "",
-      audio: "videos/hero-4-en.mp3"
+      audio: "videos/alfonso-en.mp3"
     },
     {
       id: "hero-5",
-      name: "Hero Five",
+      name: "KITT",
       dates: "",
       label: "Selfie Station 5",
-      intro: "Add the story for your fifth hero here.",
+      intro: "The legendary artificial intelligence from Knight Rider and one of television's most iconic vehicles.",
       quote: "",
-      image: "images/heroes/hero-5.jpg",
-      model: "models/hero-5.glb",
+      image: "images/heroes/kitt.jpg",
+      model: "models/kitt.glb",
       iosModel: "",
-      audio: "videos/hero-5-en.mp3"
+      audio: "videos/kitt-en.mp3"
     },
     {
       id: "hero-6",
-      name: "Hero Six",
+      name: "Coming Soon",
       dates: "",
       label: "Selfie Station 6",
-      intro: "Add the story for your sixth hero here.",
+      intro: "Your next hero will appear here.",
       quote: "",
-      image: "images/heroes/hero-6.jpg",
-      model: "models/hero-6.glb",
+      image: "images/heroes/comingsoon.jpg",
+      model: "",
       iosModel: "",
-      audio: "videos/hero-6-en.mp3"
+      audio: ""
     }
   ]
 };
